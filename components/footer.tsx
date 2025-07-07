@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
 import {
   Facebook,
   Twitter,
@@ -10,22 +10,22 @@ import {
   Phone,
   MapPin,
   Waves,
-} from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { useState } from "react"
+} from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default function Footer() {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
 
   const handleSubscribe = () => {
     if (email) {
-      alert(`Subscribed with: ${email}`)
-      setEmail("")
+      alert(`Subscribed with: ${email}`);
+      setEmail("");
     } else {
-      alert("Please enter your email.")
+      alert("Please enter your email.");
     }
-  }
+  };
 
   return (
     <footer className="bg-blue-950 text-white pt-16 pb-10 px-4 sm:px-8 lg:px-16 relative overflow-hidden">
@@ -48,13 +48,18 @@ export default function Footer() {
               <Waves className="h-8 w-8 text-blue-400" />
               <div className="absolute inset-0 bg-blue-400 rounded-full opacity-20 scale-0 group-hover:scale-150 transition-transform duration-300" />
             </div>
-            <span className="text-2xl font-bold whitespace-nowrap">Oasis Aquatic Center</span>
+            <span className="text-2xl font-bold whitespace-nowrap">
+              Oasis Aquatic Center
+            </span>
           </Link>
           <p className="text-blue-200 text-sm leading-relaxed">
-            Oasis Aquatic Center offers fitness, swimming, and wellness programs for all ages in Salem. Dive in for world-class experiences.
+            Oasis Aquatic Center offers fitness, swimming, and wellness programs
+            for all ages in Salem. Dive in for world-class experiences.
           </p>
           <div>
-            <h4 className="font-semibold text-white mb-2">Subscribe to Newsletter</h4>
+            <h4 className="font-semibold text-white mb-2">
+              Subscribe to Newsletter
+            </h4>
             <div className="flex flex-col sm:flex-row gap-3">
               <Input
                 value={email}
@@ -62,7 +67,10 @@ export default function Footer() {
                 placeholder="Your email address"
                 className="bg-white/10 border-blue-600 text-white placeholder:text-blue-300"
               />
-              <Button onClick={handleSubscribe} className="bg-blue-600 hover:bg-blue-500">
+              <Button
+                onClick={handleSubscribe}
+                className="bg-blue-600 hover:bg-blue-500"
+              >
                 Subscribe
               </Button>
             </div>
@@ -93,7 +101,10 @@ export default function Footer() {
                 { name: "Contact", href: "/contact" },
               ].map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-blue-200 hover:text-white no-underline">
+                  <Link
+                    href={item.href}
+                    className="text-blue-200 hover:text-white no-underline"
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -112,7 +123,10 @@ export default function Footer() {
                 "Personal Coaching",
               ].map((service) => (
                 <li key={service}>
-                  <Link href="/services" className="text-blue-200 hover:text-white no-underline">
+                  <Link
+                    href="/services"
+                    className="text-blue-200 hover:text-white no-underline"
+                  >
                     {service}
                   </Link>
                 </li>
@@ -131,8 +145,10 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white no-underline"
                 >
-                  Arthanari Bakkiam Complex,<br />
-                  39/7 Vasagasalai St, Ponnammapet,<br />
+                  Arthanari Bakkiam Complex,
+                  <br />
+                  39/7 Vasagasalai St, Ponnammapet,
+                  <br />
                   Salem, Tamil Nadu 636001
                 </Link>
               </div>
@@ -146,8 +162,7 @@ export default function Footer() {
               </div>
               <div className="pt-3">
                 <h5 className="font-medium text-white">Hours</h5>
-                <p>Mon–Sat: 6:00 AM – 10:00 PM</p>
-                <p>Sunday: 7:00 AM – 8:00 PM</p>
+                <p>Mon–Sun: 5:00 AM – 7:30 PM</p>
               </div>
             </div>
           </div>
@@ -156,15 +171,23 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-blue-700 mt-12 pt-6 text-sm text-blue-300 text-center sm:text-left sm:flex sm:justify-between sm:items-center">
-        <p>© {new Date().getFullYear()} Aura Fitness Studio. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Aura Fitness Studio. All rights reserved.
+        </p>
         <div className="flex gap-4 justify-center sm:justify-end mt-4 sm:mt-0">
-          {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((text) => (
-            <Link key={text} href="#" className="hover:text-white no-underline">
-              {text}
-            </Link>
-          ))}
+          {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
+            (text) => (
+              <Link
+                key={text}
+                href="#"
+                className="hover:text-white no-underline"
+              >
+                {text}
+              </Link>
+            )
+          )}
         </div>
       </div>
     </footer>
-  )
+  );
 }
