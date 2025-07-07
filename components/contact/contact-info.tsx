@@ -72,8 +72,7 @@ export function ContactInfo() {
           </div>
           <div className="space-y-3">
             <div className="flex justify-between items-center py-2 border-b border-gray-100">
-              <span className="text-gray-600">Monday – Sunday</span>
-              <span className="font-semibold text-gray-900">6 : 00 AM – 8 : 00 PM</span>
+              <span className="text-gray-600">Mon–Sun: 5:00 AM – 7:30 PM</span>
             </div>
           </div>
         </CardContent>
