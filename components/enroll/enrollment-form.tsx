@@ -167,9 +167,6 @@ export function EnrollmentForm() {
                           </Label>
                           <p className="text-sm text-gray-600">{program.duration}</p>
                         </div>
-                        <Badge variant="secondary" className="text-blue-600 bg-blue-100">
-                          {program.price}
-                        </Badge>
                       </div>
                     ))}
                   </RadioGroup>
