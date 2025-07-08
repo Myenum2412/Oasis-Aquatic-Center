@@ -9,10 +9,10 @@ export function EnrollHero() {
   const [currentStat, setCurrentStat] = useState(0)
 
   const stats = [
-    { icon: <Users className="h-6 w-6" />, value: "10,000+", label: "Happy Students" },
+    { icon: <Users className="h-6 w-6" />, value: "1000+", label: "Happy Students" },
     { icon: <Trophy className="h-6 w-6" />, value: "95%", label: "Success Rate" },
     { icon: <Star className="h-6 w-6" />, value: "4.9/5", label: "Average Rating" },
-    { icon: <Clock className="h-6 w-6" />, value: "25+", label: "Years Experience" },
+    { icon: <Clock className="h-6 w-6" />, value: "6+", label: "Years Experience" },
   ]
 
   useEffect(() => {
