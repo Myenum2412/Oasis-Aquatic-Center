@@ -227,7 +227,6 @@ export function ProgramSelector() {
                 </div>
 
                 <div className="flex items-center justify-between mt-6">
-                  <span className="text-2xl font-bold text-blue-600">{program.price}</span>
                   <Button
                     size="sm"
                     className="group-hover:scale-105 transition-transform duration-300"
